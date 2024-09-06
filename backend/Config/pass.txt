@@ -1,0 +1,25 @@
+--- auth/providers.json
++++ auth/providers.json
+@@ -3,6 +3,22 @@
+         "name": "api-key",
+         "type": "api-key",
+         "disabled": true
++    },
++    "custom-token": {
++        "name": "custom-token",
++        "type": "custom-token",
++        "disabled": false,
++        "config": {
++            "audience": [],
++            "requireAnyAudience": false,
++            "signingAlgorithm": "HS256",
++            "useJWKURI": false
++        },
++        "secret_config": {
++            "signingKeys": [
++                "InvestmentTracker"
++            ]
++        }
+     },
+     "local-userpass": {
+         "name": "local-userpass",
